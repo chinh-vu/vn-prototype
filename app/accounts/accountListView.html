@@ -1,0 +1,39 @@
+<div class="panel-body">
+
+<table  class="table">
+    <thead>
+    <tr>
+        <td>
+            First Name
+        </td>
+        <td>
+            Last Name
+        </td>
+
+        <td>
+            Middle Name
+        </td>
+        <td>
+            Date Of Birth
+        </td>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="account in vm.accounts">
+        <td title="'First Name'"><a
+                ui-sref="accountDetail({accountId:account.accountId})">
+            {{account.firstName}}</a>
+        </td>
+        <td title="'Last Name'">
+            {{account.lastName}}
+        </td>
+        <td title="'Middle Name'">
+            {{account.middleName}}
+        </td>
+        <td title="'DOB'">
+            {{account.dob | date}}
+        </td>
+    </tr>
+    </tbody>
+</table></div>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Style sheets -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet"/>
+
+    <!-- Library Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-resource.js"></script>
+    <script src="js/angular-mocks.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ui-utils.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="js/toastr.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/angular-charts.min.js"></script>
+
+
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/accountResource.js"></script>
+    <script src="common/providers/accountResourceMock.js"></script>
+    <script src="common/services/accountService.js"></script>
+
+    <!-- Account Controllers -->
+    <script src="app/accounts/accountListCtrl.js"></script>
+    <script src="app/accounts/accountDetailCtrl.js"></script>
+</head>
+<body  ng-app="schoolAppManagement">
+
+<!-- header navigation -->
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Viet Ngu School</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-2">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref="accountList">Registration
+                    </a></li>
+                <li><a href="#">Grading</a></li>
+                <li><a href="#">Services</a></li>
+                <!--
+                <li><a href="#">Works</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                -->
+                <li>
+                    <a class="btn btn-default btn-outline btn-circle"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>
+                </li>
+            </ul>
+            <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse2">
+                <form class="navbar-form navbar-right form-inline" role="form">
+                    <div class="form-group">
+                        <label class="sr-only" for="Email">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Password" required />
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->
+<!-- end of header navigation -->
+
+
+<!-- layout template view -->
+<div class="container">
+    <div ui-view></div>
+</div>
+
+
+<!-- Beginning of Tab Section -->
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel with-nav-tabs panel-success">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1success" data-toggle="tab">Success 1</a></li>
+                        <li><a href="#tab2success" data-toggle="tab">Success 2</a></li>
+                        <li><a href="#tab3success" data-toggle="tab">Success 3</a></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#tab4success" data-toggle="tab">Success 4</a></li>
+                                <li><a href="#tab5success" data-toggle="tab">Success 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1success">Success 1</div>
+                        <div class="tab-pane fade" id="tab2success">Success 2</div>
+                        <div class="tab-pane fade" id="tab3success">Success 3</div>
+                        <div class="tab-pane fade" id="tab4success">Success 4</div>
+                        <div class="tab-pane fade" id="tab5success">Success 5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!-- Ending of Tab Section -->
+
+</body>
+</html>
